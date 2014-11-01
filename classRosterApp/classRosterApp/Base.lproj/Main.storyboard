@@ -36,11 +36,10 @@
                                 </state>
                                 <connections>
                                     <action selector="whatNameButton" destination="vXZ-lx-hvc" eventType="touchUpInside" id="d1I-y5-y64"/>
-                                    <segue destination="vXZ-lx-hvc" kind="presentation" id="71C-dY-lGj"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="oOf-br-eSE">
                         <nil key="title"/>
@@ -88,7 +87,4 @@
             <point key="canvasLocation" x="791" y="926"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="neP-el-Qot"/>
-    </inferredMetricsTieBreakers>
 </document>
