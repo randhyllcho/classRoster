@@ -5,9 +5,9 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D517346C-49E7-4441-A521-027D22A0A588</string>
+	<string>BE54FA4E-991C-4C62-AE9A-6CDE356C5CA9</string>
 	<key>IDESourceControlProjectName</key>
-	<string>classRosterApp</string>
+	<string>ClassRoster 2</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>376E040639C55469E25B8B642155982C569C5184</key>
@@ -16,7 +16,7 @@
 		<string>https://github.com/randhyllcho/classRoster.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>classRosterApp/classRosterApp.xcodeproj</string>
+	<string>ClassRoster 2/ClassRoster 2.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>376E040639C55469E25B8B642155982C569C5184</key>
