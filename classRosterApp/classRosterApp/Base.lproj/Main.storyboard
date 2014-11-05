@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="classRosterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dyz-iN-ciI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -34,6 +34,26 @@
             </objects>
             <point key="canvasLocation" x="1534" y="169"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="QUj-og-voC">
+            <objects>
+                <viewController id="FPI-UF-K8j" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d0i-Sb-0UX"/>
+                        <viewControllerLayoutGuide type="bottom" id="RvP-JP-CnB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UxV-vP-qoY">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="show" id="7BG-uD-B8N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I91-pp-KAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2293" y="168.75"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="sZY-RA-WDA">
             <objects>
@@ -53,4 +73,7 @@
             <point key="canvasLocation" x="791" y="926"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7BG-uD-B8N"/>
+    </inferredMetricsTieBreakers>
 </document>
