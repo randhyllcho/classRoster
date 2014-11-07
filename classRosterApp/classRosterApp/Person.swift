@@ -9,6 +9,11 @@
 import Foundation
 
 class person {
-    var first = "John"
-    var last = "Doe"
+   
+    var name = "Dave"
+    
+}
+
+class personLast {
+    var lastName = "Henderson"
 }

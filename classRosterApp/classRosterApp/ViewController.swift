@@ -13,34 +13,54 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     
-    var names = [person]()
+    var firstNames = [person]()
+    var lastNames = [personLast]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Home"
+        var charlie = person()
+        charlie.name = "Charlie"
+        var tom = person()
+        tom.name = "Tom"
+        var lucas = person()
+        lucas.name = "Lucas"
+        self.firstNames = [charlie, tom ,lucas]
+        
+        var furbush = personLast()
+        furbush.lastName = "Furbush"
+        var wilhelmsen = personLast()
+        wilhelmsen.lastName = "Wilhelmsen"
+        var luetge = personLast()
+        luetge.lastName = "Luetge"
+        self.lastNames = [furbush, wilhelmsen, luetge]
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.names.count
+        return self.firstNames.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("PERSON_CELL", forIndexPath: indexPath) as  UITableViewCell
+        let cellFirst = tableView.dequeueReusableCellWithIdentifier("FIRST_NAME_CELL", forIndexPath: indexPath) as  UITableViewCell
         
+        var personToDisplay = self.firstNames[indexPath.row]
+        cellFirst.textLabel.text = personToDisplay.name
         
-        var personToDisplay = self.names[indexPath.row]
-        cell.textLabel.text = personToDisplay.first
-        
-        return cell
+        return cellFirst
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SHOW_FULL_NAME" {
             let detailViewController = segue.destinationViewController as DetailViewController
             let selectedIndexPath = self.tableView.indexPathForSelectedRow()
-            var personToPass = self.names[selectedIndexPath!.row]
-            detailViewController.selectedPerson = personToPass
+            var firstNameToPass = self.firstNames[selectedIndexPath!.row]
+            var lastNameToPass = self.lastNames[selectedIndexPath!.row]
+            detailViewController.selectedPerson = firstNameToPass
+            detailViewController.relieverLast = lastNameToPass
+            
         }
     }
 }

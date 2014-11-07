@@ -13,16 +13,22 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var lastNameLabel: UILabel!
+    
     var selectedPerson = person()
+    var relieverLast = personLast()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = self.selectedPerson.first
-        self.nameLabel.text = self.selectedPerson.first
-        self.view.backgroundColor = UIColor.cyanColor()
-
-
+        self.title = "Bullpen"
+        self.nameLabel.text = self.selectedPerson.name
+        self.lastNameLabel.text = self.relieverLast.lastName
+        self.view.backgroundColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
+    }
+    
+        override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
 
     /*
