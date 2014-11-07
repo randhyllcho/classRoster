@@ -9,5 +9,6 @@
 import Foundation
 
 class person {
-    var name = "Phil Humber"
+    var first = "John"
+    var last = "Doe"
 }

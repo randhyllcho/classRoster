@@ -13,6 +13,7 @@
 		320B90BF1A01DC340069AC1C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 320B90BE1A01DC340069AC1C /* Images.xcassets */; };
 		320B90C21A01DC340069AC1C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 320B90C01A01DC340069AC1C /* LaunchScreen.xib */; };
 		320B90CE1A01DC340069AC1C /* classRosterAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320B90CD1A01DC340069AC1C /* classRosterAppTests.swift */; };
+		328191B01A0B6A800063E10D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328191AF1A0B6A800063E10D /* DetailViewController.swift */; };
 		32C6E3C91A087D8500791BF6 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C6E3C81A087D8500791BF6 /* Person.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		320B90C71A01DC340069AC1C /* classRosterAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = classRosterAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		320B90CC1A01DC340069AC1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		320B90CD1A01DC340069AC1C /* classRosterAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classRosterAppTests.swift; sourceTree = "<group>"; };
+		328191AF1A0B6A800063E10D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../DetailViewController.swift; sourceTree = "<group>"; };
 		32C6E3C81A087D8500791BF6 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				320B90B91A01DC340069AC1C /* ViewController.swift */,
+				328191AF1A0B6A800063E10D /* DetailViewController.swift */,
 			);
 			name = "Control Latyer";
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				32C6E3C91A087D8500791BF6 /* Person.swift in Sources */,
 				320B90BA1A01DC340069AC1C /* ViewController.swift in Sources */,
 				320B90B81A01DC340069AC1C /* AppDelegate.swift in Sources */,
+				328191B01A0B6A800063E10D /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
