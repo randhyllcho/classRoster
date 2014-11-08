@@ -15,13 +15,13 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var lastNameLabel: UILabel!
     
-    var relieverFirst = person(name: "", last: "", Starter: false)
+    var reliever = person(name: "", last: "", Starter: false)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Pitcher"
-        self.nameLabel.text = self.relieverFirst.firstName
-        self.lastNameLabel.text = self.relieverFirst.lastName
+        self.nameLabel.text = self.reliever.firstName
+        self.lastNameLabel.text = self.reliever.lastName
         self.view.backgroundColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
     }

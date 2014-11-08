@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     
-    var firstNames = [person]()
+    var names = [person]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,19 +25,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tom.fullName()
         var lucas = person(name: "Lucas", last: "Luetge", Starter: false)
         lucas.fullName()
-        self.firstNames = [charlie, tom ,lucas]
+        self.names = [charlie, tom ,lucas]
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.firstNames.count
+        return self.names.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellFirst = tableView.dequeueReusableCellWithIdentifier("FIRST_NAME_CELL", forIndexPath: indexPath) as  UITableViewCell
         
-        var personToDisplay = self.firstNames[indexPath.row]
+        var personToDisplay = self.names[indexPath.row]
         cellFirst.textLabel.text = personToDisplay.fullName()
         
         return cellFirst
@@ -47,8 +47,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if segue.identifier == "SHOW_FULL_NAME" {
             let detailViewController = segue.destinationViewController as DetailViewController
             let selectedIndexPath = self.tableView.indexPathForSelectedRow()
-            var firstNameToPass = self.firstNames[selectedIndexPath!.row]
-            detailViewController.relieverFirst = firstNameToPass
+            var firstNameToPass = self.names[selectedIndexPath!.row]
+            detailViewController.reliever = firstNameToPass
         }
     }
 }
