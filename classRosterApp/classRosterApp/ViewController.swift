@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Home"
+        self.title = "Bullpen"
         var charlie = person()
         charlie.name = "Charlie"
         var tom = person()
@@ -58,9 +58,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let selectedIndexPath = self.tableView.indexPathForSelectedRow()
             var firstNameToPass = self.firstNames[selectedIndexPath!.row]
             var lastNameToPass = self.lastNames[selectedIndexPath!.row]
-            detailViewController.selectedPerson = firstNameToPass
+            detailViewController.relieverFirst = firstNameToPass
             detailViewController.relieverLast = lastNameToPass
-            
         }
     }
 }
