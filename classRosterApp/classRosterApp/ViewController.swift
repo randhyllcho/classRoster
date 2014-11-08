@@ -14,27 +14,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     
     var firstNames = [person]()
-    var lastNames = [personLast]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Bullpen"
-        var charlie = person()
-        charlie.name = "Charlie"
-        var tom = person()
-        tom.name = "Tom"
-        var lucas = person()
-        lucas.name = "Lucas"
+        var charlie = person(name: "Charlie", last: "Furbush", Starter: true)
+        charlie.fullName()
+        var tom = person(name: "Tom", last: "Wilhelmsen", Starter: true)
+        tom.fullName()
+        var lucas = person(name: "Lucas", last: "Luetge", Starter: false)
+        lucas.fullName()
         self.firstNames = [charlie, tom ,lucas]
-        
-        var furbush = personLast()
-        furbush.lastName = "Furbush"
-        var wilhelmsen = personLast()
-        wilhelmsen.lastName = "Wilhelmsen"
-        var luetge = personLast()
-        luetge.lastName = "Luetge"
-        self.lastNames = [furbush, wilhelmsen, luetge]
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -47,7 +38,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cellFirst = tableView.dequeueReusableCellWithIdentifier("FIRST_NAME_CELL", forIndexPath: indexPath) as  UITableViewCell
         
         var personToDisplay = self.firstNames[indexPath.row]
-        cellFirst.textLabel.text = personToDisplay.name
+        cellFirst.textLabel.text = personToDisplay.fullName()
         
         return cellFirst
     }
@@ -57,9 +48,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let detailViewController = segue.destinationViewController as DetailViewController
             let selectedIndexPath = self.tableView.indexPathForSelectedRow()
             var firstNameToPass = self.firstNames[selectedIndexPath!.row]
-            var lastNameToPass = self.lastNames[selectedIndexPath!.row]
             detailViewController.relieverFirst = firstNameToPass
-            detailViewController.relieverLast = lastNameToPass
         }
     }
 }

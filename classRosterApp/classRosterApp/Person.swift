@@ -9,11 +9,20 @@
 import Foundation
 
 class person {
-   
-    var name = "Dave"
+    var firstName = "Dave"
+    var lastName = "Henderson"
+    var isStarter = Bool()
     
+    init (name : String, last : String, Starter : Bool) {
+        self.firstName = name
+        self.lastName = last
+        self.isStarter = Starter
+    }
+    
+    func fullName() -> String {
+        return "\(firstName) \(lastName)"
+    }
 }
 
-class personLast {
-    var lastName = "Henderson"
-}
+
+
