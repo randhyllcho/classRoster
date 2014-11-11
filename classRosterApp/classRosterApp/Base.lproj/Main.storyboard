@@ -49,46 +49,125 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wV2-GS-6I8">
-                                <rect key="frame" x="16" y="112" width="143" height="21"/>
-                                <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="35"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="35"/>
-                                    <rect key="frame" x="16" y="157" width="143" height="68"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sed-4R-ray">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="9Nz-9j-z29"/>
+                                    <constraint firstAttribute="height" constant="30" id="Tnr-Do-fem"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9Nz-9j-z29"/>
+                                        <exclude reference="Tnr-Do-fem"/>
+                                    </mask>
                                 </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ec9-jA-axx">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="Helvetica-LightOblique" family="Helvetica" pointSize="15"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="49" y="204" width="143" height="21"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="9Nz-9j-z29"/>
+                                        <include reference="Tnr-Do-fem"/>
+                                    </mask>
                                 </variation>
-                            </label>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbv-SA-r6c">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="2qe-jb-Yda"/>
+                                    <constraint firstAttribute="height" constant="30" id="HbZ-yu-4fe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2qe-jb-Yda"/>
+                                        <exclude reference="HbZ-yu-4fe"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="2qe-jb-Yda"/>
+                                        <include reference="HbZ-yu-4fe"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z1R-ZI-8y4">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ayP-zM-yfp"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="c54-xd-JmN"/>
+                                    <constraint firstAttribute="width" constant="240" id="rA6-Qz-wtY"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="ykY-Zy-9u7"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ayP-zM-yfp"/>
+                                        <exclude reference="c54-xd-JmN"/>
+                                        <exclude reference="rA6-Qz-wtY"/>
+                                        <exclude reference="ykY-Zy-9u7"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ayP-zM-yfp"/>
+                                        <include reference="c54-xd-JmN"/>
+                                        <include reference="rA6-Qz-wtY"/>
+                                        <include reference="ykY-Zy-9u7"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Sed-4R-ray" firstAttribute="top" secondItem="KCR-R9-qAt" secondAttribute="bottom" constant="8" id="BKs-xj-fT8"/>
+                            <constraint firstItem="z1R-ZI-8y4" firstAttribute="top" secondItem="cbv-SA-r6c" secondAttribute="bottom" constant="8" id="XvM-Tm-ksj"/>
+                            <constraint firstItem="cbv-SA-r6c" firstAttribute="top" secondItem="Sed-4R-ray" secondAttribute="bottom" constant="8" id="aiz-es-tSV"/>
+                            <constraint firstAttribute="centerX" secondItem="z1R-ZI-8y4" secondAttribute="centerX" id="co5-t6-bEd"/>
+                            <constraint firstAttribute="centerX" secondItem="cbv-SA-r6c" secondAttribute="centerX" id="nAk-h1-yq7"/>
+                            <constraint firstItem="z1R-ZI-8y4" firstAttribute="top" secondItem="cbv-SA-r6c" secondAttribute="bottom" constant="18" id="qnE-Gk-L3A"/>
+                            <constraint firstAttribute="centerX" secondItem="Sed-4R-ray" secondAttribute="centerX" id="wrd-KY-op2"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Ec9-jA-axx"/>
+                                <exclude reference="Sed-4R-ray"/>
+                                <exclude reference="cbv-SA-r6c"/>
+                                <exclude reference="z1R-ZI-8y4"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="BKs-xj-fT8"/>
+                                <exclude reference="wrd-KY-op2"/>
+                                <exclude reference="XvM-Tm-ksj"/>
+                                <exclude reference="co5-t6-bEd"/>
+                                <exclude reference="qnE-Gk-L3A"/>
+                                <exclude reference="aiz-es-tSV"/>
+                                <exclude reference="nAk-h1-yq7"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Ec9-jA-axx"/>
+                                <include reference="Sed-4R-ray"/>
+                                <include reference="cbv-SA-r6c"/>
+                                <include reference="z1R-ZI-8y4"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="BKs-xj-fT8"/>
+                                <include reference="wrd-KY-op2"/>
+                                <exclude reference="XvM-Tm-ksj"/>
+                                <include reference="co5-t6-bEd"/>
+                                <include reference="qnE-Gk-L3A"/>
+                                <include reference="aiz-es-tSV"/>
+                                <include reference="nAk-h1-yq7"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="lastNameLabel" destination="Ec9-jA-axx" id="1Ne-pR-eQL"/>
-                        <outlet property="nameLabel" destination="wV2-GS-6I8" id="ewT-jm-ld2"/>
+                        <outlet property="firstNameTextBox" destination="Sed-4R-ray" id="FXI-gj-tb9"/>
+                        <outlet property="lastNameTextBox" destination="cbv-SA-r6c" id="RHw-fE-A0q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8t-FS-g9K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2268" y="173.25"/>
+            <point key="canvasLocation" x="2268" y="168.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sZY-RA-WDA">

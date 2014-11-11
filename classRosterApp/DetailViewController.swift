@@ -8,36 +8,33 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var firstNameTextBox: UITextField!
     
-    @IBOutlet weak var nameLabel: UILabel!
-    
-    @IBOutlet weak var lastNameLabel: UILabel!
+    @IBOutlet weak var lastNameTextBox: UITextField!
     
     var reliever = person(name: "", last: "", Starter: false)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Pitcher"
-        self.nameLabel.text = self.reliever.firstName
-        self.lastNameLabel.text = self.reliever.lastName
+        self.firstNameTextBox.text = self.reliever.firstName
+        self.lastNameTextBox.text = self.reliever.lastName
         self.view.backgroundColor = UIColor.whiteColor()
-        // Do any additional setup after loading the view.
+        
+        self.firstNameTextBox.delegate = self
+        self.lastNameTextBox.delegate = self
     }
     
-        override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    //hide first name text field
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //hide last name text field
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
-    */
-
-}
+   }

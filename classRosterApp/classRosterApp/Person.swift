@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
 class person {
-    var firstName = "Dave"
-    var lastName = "Henderson"
+    var firstName : String
+    var lastName : String
     var isStarter = Bool()
+    var image : UIImage?
     
     init (name : String, last : String, Starter : Bool) {
         self.firstName = name

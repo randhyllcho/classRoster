@@ -39,7 +39,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         var personToDisplay = self.names[indexPath.row]
         cellFirst.textLabel.text = personToDisplay.fullName()
-        
+        cellFirst.textLabel.font = UIFont(name: "Didot", size: 16.0)
         return cellFirst
     }
     
