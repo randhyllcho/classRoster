@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailViewController: UIViewController, UITextFieldDelegate {
-
+    
     @IBOutlet weak var firstNameTextBox: UITextField!
     
     @IBOutlet weak var lastNameTextBox: UITextField!
