@@ -10,9 +10,10 @@
 		320B90B81A01DC340069AC1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320B90B71A01DC340069AC1C /* AppDelegate.swift */; };
 		320B90BA1A01DC340069AC1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320B90B91A01DC340069AC1C /* ViewController.swift */; };
 		320B90BD1A01DC340069AC1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320B90BB1A01DC340069AC1C /* Main.storyboard */; };
-		320B90BF1A01DC340069AC1C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 320B90BE1A01DC340069AC1C /* Images.xcassets */; };
+		320B90BF1A01DC340069AC1C /* lamboButt.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 320B90BE1A01DC340069AC1C /* lamboButt.xcassets */; };
 		320B90C21A01DC340069AC1C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 320B90C01A01DC340069AC1C /* LaunchScreen.xib */; };
 		320B90CE1A01DC340069AC1C /* classRosterAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320B90CD1A01DC340069AC1C /* classRosterAppTests.swift */; };
+		321218231A16D33F00CAC0C7 /* Lamborghini-Aventador-White butt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 321218221A16D33F00CAC0C7 /* Lamborghini-Aventador-White butt.jpg */; };
 		328191B01A0B6A800063E10D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328191AF1A0B6A800063E10D /* DetailViewController.swift */; };
 		32C6E3C91A087D8500791BF6 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C6E3C81A087D8500791BF6 /* Person.swift */; };
 /* End PBXBuildFile section */
@@ -33,11 +34,12 @@
 		320B90B71A01DC340069AC1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		320B90B91A01DC340069AC1C /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		320B90BC1A01DC340069AC1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		320B90BE1A01DC340069AC1C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		320B90BE1A01DC340069AC1C /* lamboButt.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = lamboButt.xcassets; path = classRosterApp/lamboButt.xcassets; sourceTree = SOURCE_ROOT; };
 		320B90C11A01DC340069AC1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		320B90C71A01DC340069AC1C /* classRosterAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = classRosterAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		320B90CC1A01DC340069AC1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		320B90CD1A01DC340069AC1C /* classRosterAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classRosterAppTests.swift; sourceTree = "<group>"; };
+		321218221A16D33F00CAC0C7 /* Lamborghini-Aventador-White butt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Lamborghini-Aventador-White butt.jpg"; sourceTree = "<group>"; };
 		328191AF1A0B6A800063E10D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../DetailViewController.swift; sourceTree = "<group>"; };
 		32C6E3C81A087D8500791BF6 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,7 +83,7 @@
 		320B90B41A01DC340069AC1C /* classRosterApp */ = {
 			isa = PBXGroup;
 			children = (
-				320B90D91A01DC900069AC1C /* Control Latyer */,
+				320B90D91A01DC900069AC1C /* Control Layer */,
 				320B90D81A01DC7C0069AC1C /* View Layer */,
 				320B90D71A01DC630069AC1C /* Model Layler */,
 				320B90B71A01DC340069AC1C /* AppDelegate.swift */,
@@ -128,18 +130,19 @@
 			children = (
 				320B90BB1A01DC340069AC1C /* Main.storyboard */,
 				320B90C01A01DC340069AC1C /* LaunchScreen.xib */,
-				320B90BE1A01DC340069AC1C /* Images.xcassets */,
+				321218221A16D33F00CAC0C7 /* Lamborghini-Aventador-White butt.jpg */,
+				320B90BE1A01DC340069AC1C /* lamboButt.xcassets */,
 			);
 			name = "View Layer";
 			sourceTree = "<group>";
 		};
-		320B90D91A01DC900069AC1C /* Control Latyer */ = {
+		320B90D91A01DC900069AC1C /* Control Layer */ = {
 			isa = PBXGroup;
 			children = (
 				320B90B91A01DC340069AC1C /* ViewController.swift */,
 				328191AF1A0B6A800063E10D /* DetailViewController.swift */,
 			);
-			name = "Control Latyer";
+			name = "Control Layer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,8 +226,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				320B90BD1A01DC340069AC1C /* Main.storyboard in Resources */,
+				321218231A16D33F00CAC0C7 /* Lamborghini-Aventador-White butt.jpg in Resources */,
 				320B90C21A01DC340069AC1C /* LaunchScreen.xib in Resources */,
-				320B90BF1A01DC340069AC1C /* Images.xcassets in Resources */,
+				320B90BF1A01DC340069AC1C /* lamboButt.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

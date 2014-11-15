@@ -8,11 +8,15 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITextFieldDelegate {
+class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    
+    @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var firstNameTextBox: UITextField!
-    
     @IBOutlet weak var lastNameTextBox: UITextField!
+    
+    var imagePickerController = UIImagePickerController()
     
     var reliever = person(name: "", last: "", Starter: false)
     
@@ -36,5 +40,23 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    
+    @IBAction func camerButtonPressed(sender: AnyObject) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
+            self.imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
+            self.imagePickerController.delegate = self
+            self.imagePickerController.allowsEditing = true
+            self.presentViewController(self.imagePickerController, animated: true, completion: nil)
+        }
+        
+    }
+    
+     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        let image = info[UIImagePickerControllerEditedImage] as UIImage
+        self.imageView.image = image
+        
+        imagePickerController.dismissViewControllerAnimated(true, completion: nil)
     }
    }

@@ -67,33 +67,56 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hob-hM-Ii2">
-                                <rect key="frame" x="180" y="156" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.4039215686" green="0.97254901959999995" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lamborghini-Aventador-White butt.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hob-hM-Ii2">
+                                <rect key="frame" x="200" y="156" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="eFp-2s-iJy"/>
-                                    <constraint firstAttribute="width" constant="240" id="sth-zU-LA6"/>
+                                    <constraint firstAttribute="height" constant="200" id="eFp-2s-iJy"/>
+                                    <constraint firstAttribute="width" constant="200" id="sth-zU-LA6"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8z-N2-TtR">
+                                <rect key="frame" x="262" y="510" width="75" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="nRS-D5-7dV"/>
+                                    <constraint firstAttribute="height" constant="30" id="qid-oB-zrD"/>
+                                </constraints>
+                                <state key="normal" title="Camera">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="camerButtonPressed:" destination="KGl-gx-Mfq" eventType="touchUpInside" id="ihu-cM-ddW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="rpZ-r3-AlX" firstAttribute="leading" secondItem="EJl-DU-zgn" secondAttribute="leading" constant="-1" id="Ehp-hd-oBc"/>
                             <constraint firstItem="rpZ-r3-AlX" firstAttribute="top" secondItem="KCR-R9-qAt" secondAttribute="bottom" constant="8" id="Hnt-z1-wlE"/>
+                            <constraint firstAttribute="centerX" secondItem="e8z-N2-TtR" secondAttribute="centerX" id="LiJ-c0-cNs"/>
                             <constraint firstItem="EJl-DU-zgn" firstAttribute="top" secondItem="rpZ-r3-AlX" secondAttribute="bottom" constant="8" id="Yax-h4-hPl"/>
                             <constraint firstAttribute="centerX" secondItem="rpZ-r3-AlX" secondAttribute="centerX" id="Ys2-Gb-gd6"/>
+                            <constraint firstAttribute="centerX" secondItem="rpZ-r3-AlX" secondAttribute="centerX" id="eX7-7s-c6X"/>
                             <constraint firstAttribute="centerX" secondItem="EJl-DU-zgn" secondAttribute="centerX" id="gtX-b0-gXv"/>
                             <constraint firstItem="hob-hM-Ii2" firstAttribute="top" secondItem="EJl-DU-zgn" secondAttribute="bottom" constant="16" id="hLM-7v-0eV"/>
                             <constraint firstAttribute="centerX" secondItem="hob-hM-Ii2" secondAttribute="centerX" id="lGw-qz-xWX"/>
+                            <constraint firstItem="X1o-OE-XKG" firstAttribute="top" secondItem="e8z-N2-TtR" secondAttribute="bottom" constant="60" id="z7R-b3-wEt"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ys2-Gb-gd6"/>
+                                <exclude reference="gtX-b0-gXv"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="firstNameTextBox" destination="rpZ-r3-AlX" id="kRk-RU-NNv"/>
+                        <outlet property="imageView" destination="hob-hM-Ii2" id="5QC-fC-fv8"/>
                         <outlet property="lastNameTextBox" destination="EJl-DU-zgn" id="77D-7L-89o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8t-FS-g9K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2268" y="168.75"/>
+            <point key="canvasLocation" x="2268" y="168"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sZY-RA-WDA">
@@ -114,4 +137,7 @@
             <point key="canvasLocation" x="769" y="169"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Lamborghini-Aventador-White butt.jpg" width="1920" height="1080"/>
+    </resources>
 </document>
