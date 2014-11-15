@@ -18,6 +18,10 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     var imagePickerController = UIImagePickerController()
     
+    var showsCameraControls = true
+    
+    var cameraOverlayView: UIView?
+    
     var reliever = person(name: "", last: "", Starter: false)
     
     override func viewDidLoad() {
@@ -26,6 +30,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         self.firstNameTextBox.text = self.reliever.firstName
         self.lastNameTextBox.text = self.reliever.lastName
         self.view.backgroundColor = UIColor.whiteColor()
+        
         
         self.firstNameTextBox.delegate = self
         self.lastNameTextBox.delegate = self
