@@ -13,7 +13,7 @@ class person {
     var firstName : String
     var lastName : String
     var isStarter = Bool()
-    var picture : UIImage?
+    var image : UIImage?
     
     init (name : String, last : String, Starter : Bool) {
         self.firstName = name

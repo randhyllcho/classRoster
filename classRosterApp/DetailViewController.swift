@@ -12,7 +12,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     
     @IBOutlet weak var imageView: UIImageView!
-    
     @IBOutlet weak var firstNameTextBox: UITextField!
     @IBOutlet weak var lastNameTextBox: UITextField!
     
@@ -29,7 +28,15 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         self.title = "Pitcher"
         self.firstNameTextBox.text = self.reliever.firstName
         self.lastNameTextBox.text = self.reliever.lastName
+        firstNameTextBox.font = UIFont(name: "Didot", size: 15)
+        lastNameTextBox.font = UIFont(name: "Didot", size: 15)
         self.view.backgroundColor = UIColor.whiteColor()
+        
+        if (self.reliever.image != nil) {
+            self.imageView.image = self.reliever.image!
+        } else {
+            self.imageView.image = self.imageView.image
+        }
         
         
         self.firstNameTextBox.delegate = self
@@ -60,8 +67,12 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
      func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         let image = info[UIImagePickerControllerEditedImage] as UIImage
+        
         self.imageView.image = image
+
+        self.reliever.image = image
         
         imagePickerController.dismissViewControllerAnimated(true, completion: nil)
+        
     }
    }

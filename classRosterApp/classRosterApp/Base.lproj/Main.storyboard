@@ -75,7 +75,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8z-N2-TtR">
-                                <rect key="frame" x="262" y="510" width="75" height="30"/>
+                                <rect key="frame" x="262" y="540" width="75" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="nRS-D5-7dV"/>
                                     <constraint firstAttribute="height" constant="30" id="qid-oB-zrD"/>
@@ -99,7 +99,7 @@
                             <constraint firstAttribute="centerX" secondItem="EJl-DU-zgn" secondAttribute="centerX" id="gtX-b0-gXv"/>
                             <constraint firstItem="hob-hM-Ii2" firstAttribute="top" secondItem="EJl-DU-zgn" secondAttribute="bottom" constant="16" id="hLM-7v-0eV"/>
                             <constraint firstAttribute="centerX" secondItem="hob-hM-Ii2" secondAttribute="centerX" id="lGw-qz-xWX"/>
-                            <constraint firstItem="X1o-OE-XKG" firstAttribute="top" secondItem="e8z-N2-TtR" secondAttribute="bottom" constant="60" id="z7R-b3-wEt"/>
+                            <constraint firstItem="X1o-OE-XKG" firstAttribute="top" secondItem="e8z-N2-TtR" secondAttribute="bottom" constant="30" id="z7R-b3-wEt"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
