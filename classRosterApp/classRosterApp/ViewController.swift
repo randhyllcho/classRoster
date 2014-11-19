@@ -13,33 +13,46 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     
-    var names = [person]()
-
+    var people = [Person]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Bullpen"
-        var charlie = person(name: "Charlie", last: "Furbush", Starter: true)
-        charlie.fullName()
-        var tom = person(name: "Tom", last: "Wilhelmsen", Starter: true)
-        tom.fullName()
-        var lucas = person(name: "Lucas", last: "Luetge", Starter: false)
-        lucas.fullName()
-        self.names = [charlie, tom ,lucas]
+        self.loadFromPlist()
+        
+        self.title = "Class Roster"
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        
+    
     }
+    
+    func loadFromPlist(){
+        let plistURL = NSBundle.mainBundle().pathForResource("roster", ofType:"plist")
+        
+        let plistArray = NSArray(contentsOfFile: plistURL!)
+        for object in plistArray! {
+            if let personDictionary = object as? NSDictionary {
+                let firstName = personDictionary["First Name"] as String
+                let lastName = personDictionary["Last Name"] as String
+                var person = Person(name: firstName, last: lastName)
+                self.people.append(person)
+            }
+        }
+    }
+    
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.names.count
+        return self.people.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellFirst = tableView.dequeueReusableCellWithIdentifier("FIRST_NAME_CELL", forIndexPath: indexPath) as  UITableViewCell
+        let cellFirst = tableView.dequeueReusableCellWithIdentifier("FIRST_NAME_CELL", forIndexPath: indexPath) as PersonTableViewCell
         
-        var personToDisplay = self.names[indexPath.row]
-        cellFirst.textLabel.text = personToDisplay.fullName()
-        cellFirst.textLabel.font = UIFont(name: "Didot", size: 20.0)
+        var personToDisplay = self.people[indexPath.row]
+        cellFirst.nameLabel.text = personToDisplay.firstName
+        cellFirst.nameLabel.font = UIFont(name: "Didot", size: 20.0)
+        cellFirst.titleLabel.text = personToDisplay.lastName
+        cellFirst.titleLabel.font = UIFont(name: "Didot", size: 15.0)
         return cellFirst
     }
     
@@ -47,8 +60,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if segue.identifier == "SHOW_FULL_NAME" {
             let detailViewController = segue.destinationViewController as DetailViewController
             let selectedIndexPath = self.tableView.indexPathForSelectedRow()
-            var firstNameToPass = self.names[selectedIndexPath!.row]
+            var firstNameToPass = self.people[selectedIndexPath!.row]
             detailViewController.reliever = firstNameToPass
+            
         }
     }
 }

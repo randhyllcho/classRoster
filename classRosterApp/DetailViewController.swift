@@ -21,23 +21,16 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     var cameraOverlayView: UIView?
     
-    var reliever = person(name: "", last: "", Starter: false)
+    var reliever = Person(name: "", last: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Pitcher"
-        self.firstNameTextBox.text = self.reliever.firstName
-        self.lastNameTextBox.text = self.reliever.lastName
-        firstNameTextBox.font = UIFont(name: "Didot", size: 15)
-        lastNameTextBox.font = UIFont(name: "Didot", size: 15)
+        self.title = "Dev"
         self.view.backgroundColor = UIColor.whiteColor()
         
         if (self.reliever.image != nil) {
             self.imageView.image = self.reliever.image!
-        } else {
-            self.imageView.image = self.imageView.image
-        }
-        
+        }         
         
         self.firstNameTextBox.delegate = self
         self.lastNameTextBox.delegate = self

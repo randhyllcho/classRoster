@@ -9,16 +9,16 @@
 import Foundation
 import UIKit
 
-class person {
+class Person {
     var firstName : String
     var lastName : String
-    var isStarter = Bool()
+    //var isStarter = Bool()
     var image : UIImage?
     
-    init (name : String, last : String, Starter : Bool) {
+    init (name : String, last : String) {
         self.firstName = name
         self.lastName = last
-        self.isStarter = Starter
+        //self.isStarter = Starter
     }
     
     func fullName() -> String {

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C6C24A7A-438E-479B-BD69-E8A7E35D6111</string>
+	<key>IDESourceControlProjectName</key>
+	<string>rosterAppTwo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>376E040639C55469E25B8B642155982C569C5184</key>
+		<string>https://github.com/randhyllcho/class-person-thing.git</string>
+		<key>693E9A54886EA5432FAEB5B9D962732920DFE431</key>
+		<string>https://github.com/randhyllcho/classRoster.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ClassRoster 2/rosterAppTwo/rosterAppTwo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>376E040639C55469E25B8B642155982C569C5184</key>
+		<string>../../../../..</string>
+		<key>693E9A54886EA5432FAEB5B9D962732920DFE431</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/randhyllcho/classRoster.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>693E9A54886EA5432FAEB5B9D962732920DFE431</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>376E040639C55469E25B8B642155982C569C5184</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>693E9A54886EA5432FAEB5B9D962732920DFE431</string>
+			<key>IDESourceControlWCCName</key>
+			<string>untitled%20folder</string>
+		</dict>
+	</array>
+</dict>
+</plist>
