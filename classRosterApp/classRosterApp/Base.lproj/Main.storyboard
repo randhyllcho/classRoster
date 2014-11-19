@@ -103,35 +103,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rpZ-r3-AlX">
-                                <rect key="frame" x="251" y="72" width="97" height="30"/>
+                                <rect key="frame" x="200" y="89" width="97" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="3C9-Jx-whc"/>
-                                    <constraint firstAttribute="height" constant="30" id="Tdi-11-ZzC"/>
+                                    <constraint firstAttribute="height" constant="30" id="E63-Oe-INr"/>
+                                    <constraint firstAttribute="width" constant="97" id="NwN-3x-rtQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EJl-DU-zgn">
-                                <rect key="frame" x="252" y="110" width="97" height="30"/>
+                                <rect key="frame" x="200" y="130" width="97" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="4f6-Vg-cVE"/>
-                                    <constraint firstAttribute="width" constant="97" id="KGE-Ef-BiQ"/>
+                                    <constraint firstAttribute="width" constant="97" id="Jrn-mz-m7Q"/>
+                                    <constraint firstAttribute="height" constant="30" id="rqv-Yj-hIX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lamborghini-Aventador-White butt.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hob-hM-Ii2">
-                                <rect key="frame" x="200" y="156" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="eFp-2s-iJy"/>
-                                    <constraint firstAttribute="width" constant="200" id="sth-zU-LA6"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8z-N2-TtR">
                                 <rect key="frame" x="262" y="540" width="75" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="nRS-D5-7dV"/>
-                                    <constraint firstAttribute="height" constant="30" id="qid-oB-zrD"/>
+                                    <constraint firstAttribute="height" constant="30" id="Wpb-kn-fRK"/>
+                                    <constraint firstAttribute="width" constant="75" id="ogh-MP-BYt"/>
                                 </constraints>
                                 <state key="normal" title="Camera">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -140,26 +133,25 @@
                                     <action selector="camerButtonPressed:" destination="KGl-gx-Mfq" eventType="touchUpInside" id="ihu-cM-ddW"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lamborghini-Aventador-White butt.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hob-hM-Ii2">
+                                <rect key="frame" x="347" y="72" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="C3q-3A-28n"/>
+                                    <constraint firstAttribute="height" constant="200" id="uY8-3O-avr"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="rpZ-r3-AlX" firstAttribute="leading" secondItem="EJl-DU-zgn" secondAttribute="leading" constant="-1" id="Ehp-hd-oBc"/>
-                            <constraint firstItem="rpZ-r3-AlX" firstAttribute="top" secondItem="KCR-R9-qAt" secondAttribute="bottom" constant="8" id="Hnt-z1-wlE"/>
-                            <constraint firstAttribute="centerX" secondItem="e8z-N2-TtR" secondAttribute="centerX" id="LiJ-c0-cNs"/>
-                            <constraint firstItem="EJl-DU-zgn" firstAttribute="top" secondItem="rpZ-r3-AlX" secondAttribute="bottom" constant="8" id="Yax-h4-hPl"/>
-                            <constraint firstAttribute="centerX" secondItem="rpZ-r3-AlX" secondAttribute="centerX" id="Ys2-Gb-gd6"/>
-                            <constraint firstAttribute="centerX" secondItem="rpZ-r3-AlX" secondAttribute="centerX" id="eX7-7s-c6X"/>
-                            <constraint firstAttribute="centerX" secondItem="EJl-DU-zgn" secondAttribute="centerX" id="gtX-b0-gXv"/>
-                            <constraint firstItem="hob-hM-Ii2" firstAttribute="top" secondItem="EJl-DU-zgn" secondAttribute="bottom" constant="16" id="hLM-7v-0eV"/>
-                            <constraint firstAttribute="centerX" secondItem="hob-hM-Ii2" secondAttribute="centerX" id="lGw-qz-xWX"/>
-                            <constraint firstItem="X1o-OE-XKG" firstAttribute="top" secondItem="e8z-N2-TtR" secondAttribute="bottom" constant="30" id="z7R-b3-wEt"/>
+                            <constraint firstItem="EJl-DU-zgn" firstAttribute="top" secondItem="rpZ-r3-AlX" secondAttribute="bottom" constant="11" id="1j1-Jj-asS"/>
+                            <constraint firstItem="hob-hM-Ii2" firstAttribute="top" secondItem="KCR-R9-qAt" secondAttribute="bottom" constant="8" id="3Zc-Ba-3PD"/>
+                            <constraint firstItem="X1o-OE-XKG" firstAttribute="top" secondItem="e8z-N2-TtR" secondAttribute="bottom" constant="30" id="BIO-1x-Hux"/>
+                            <constraint firstItem="rpZ-r3-AlX" firstAttribute="leading" secondItem="EJl-DU-zgn" secondAttribute="leading" id="G23-Tq-c5X"/>
+                            <constraint firstItem="hob-hM-Ii2" firstAttribute="trailing" secondItem="iN6-Ga-cFr" secondAttribute="trailingMargin" constant="-37" id="GS1-qa-RJR"/>
+                            <constraint firstItem="hob-hM-Ii2" firstAttribute="leading" secondItem="rpZ-r3-AlX" secondAttribute="trailing" constant="50" id="how-gT-aVV"/>
+                            <constraint firstAttribute="centerX" secondItem="e8z-N2-TtR" secondAttribute="centerX" id="jVc-MG-HyV"/>
+                            <constraint firstItem="rpZ-r3-AlX" firstAttribute="top" secondItem="KCR-R9-qAt" secondAttribute="bottom" constant="25" id="wek-I9-xwr"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Ys2-Gb-gd6"/>
-                                <exclude reference="gtX-b0-gXv"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="firstNameTextBox" destination="rpZ-r3-AlX" id="kRk-RU-NNv"/>
