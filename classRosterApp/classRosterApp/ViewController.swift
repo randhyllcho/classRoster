@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         self.loadFromPlist()
         
-        self.title = "Class Roster"
+        self.title = "Future Dev Billionaires"
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -60,8 +60,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if segue.identifier == "SHOW_FULL_NAME" {
             let detailViewController = segue.destinationViewController as DetailViewController
             let selectedIndexPath = self.tableView.indexPathForSelectedRow()
-            var firstNameToPass = self.people[selectedIndexPath!.row]
-            detailViewController.reliever = firstNameToPass
+            var nameToPass = self.people[selectedIndexPath!.row]
+            detailViewController.developer = nameToPass
             
         }
     }
