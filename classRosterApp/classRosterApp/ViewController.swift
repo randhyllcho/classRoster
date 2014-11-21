@@ -17,25 +17,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.loadFromPlist()
-        
         self.title = "Future Dev Billionaires"
-        
         self.tableView.dataSource = self
         self.tableView.delegate = self
+    }
     
+     override func viewWillAppear(animated: Bool){
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
     }
     
     func loadFromPlist(){
         let plistURL = NSBundle.mainBundle().pathForResource("roster", ofType:"plist")
-        
         let plistArray = NSArray(contentsOfFile: plistURL!)
         for object in plistArray! {
             if let personDictionary = object as? NSDictionary {
                 let firstName = personDictionary["First Name"] as String
                 let lastName = personDictionary["Last Name"] as String
-                var person = Person(name: firstName, last: lastName)
+                var person = Person(first: firstName, last: lastName)
                 self.people.append(person)
             }
         }
@@ -53,6 +53,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cellFirst.nameLabel.font = UIFont(name: "Didot", size: 20.0)
         cellFirst.titleLabel.text = personToDisplay.lastName
         cellFirst.titleLabel.font = UIFont(name: "Didot", size: 15.0)
+        cellFirst.imageView.image = personToDisplay.image
+        
         return cellFirst
     }
     

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zU4-5r-sK6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zU4-5r-sK6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -103,7 +104,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rpZ-r3-AlX">
-                                <rect key="frame" x="200" y="89" width="97" height="30"/>
+                                <rect key="frame" x="120" y="89" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="E63-Oe-INr"/>
                                     <constraint firstAttribute="width" constant="97" id="NwN-3x-rtQ"/>
@@ -112,7 +113,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EJl-DU-zgn">
-                                <rect key="frame" x="200" y="130" width="97" height="30"/>
+                                <rect key="frame" x="120" y="130" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="Jrn-mz-m7Q"/>
                                     <constraint firstAttribute="height" constant="30" id="rqv-Yj-hIX"/>
@@ -134,9 +135,8 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lamborghini-Aventador-White butt.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hob-hM-Ii2">
-                                <rect key="frame" x="347" y="72" width="200" height="200"/>
+                                <rect key="frame" x="247" y="72" width="300" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="C3q-3A-28n"/>
                                     <constraint firstAttribute="height" constant="200" id="uY8-3O-avr"/>
                                 </constraints>
                             </imageView>
@@ -146,17 +146,18 @@
                             <constraint firstItem="EJl-DU-zgn" firstAttribute="top" secondItem="rpZ-r3-AlX" secondAttribute="bottom" constant="11" id="1j1-Jj-asS"/>
                             <constraint firstItem="hob-hM-Ii2" firstAttribute="top" secondItem="KCR-R9-qAt" secondAttribute="bottom" constant="8" id="3Zc-Ba-3PD"/>
                             <constraint firstItem="X1o-OE-XKG" firstAttribute="top" secondItem="e8z-N2-TtR" secondAttribute="bottom" constant="30" id="BIO-1x-Hux"/>
+                            <constraint firstItem="hob-hM-Ii2" firstAttribute="width" secondItem="iN6-Ga-cFr" secondAttribute="width" multiplier="0.5" id="Era-CT-kgK"/>
                             <constraint firstItem="rpZ-r3-AlX" firstAttribute="leading" secondItem="EJl-DU-zgn" secondAttribute="leading" id="G23-Tq-c5X"/>
                             <constraint firstItem="hob-hM-Ii2" firstAttribute="trailing" secondItem="iN6-Ga-cFr" secondAttribute="trailingMargin" constant="-37" id="GS1-qa-RJR"/>
-                            <constraint firstItem="hob-hM-Ii2" firstAttribute="leading" secondItem="rpZ-r3-AlX" secondAttribute="trailing" constant="50" id="how-gT-aVV"/>
+                            <constraint firstItem="hob-hM-Ii2" firstAttribute="leading" secondItem="rpZ-r3-AlX" secondAttribute="trailing" constant="30" id="how-gT-aVV"/>
                             <constraint firstAttribute="centerX" secondItem="e8z-N2-TtR" secondAttribute="centerX" id="jVc-MG-HyV"/>
                             <constraint firstItem="rpZ-r3-AlX" firstAttribute="top" secondItem="KCR-R9-qAt" secondAttribute="bottom" constant="25" id="wek-I9-xwr"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="firstNameTextBox" destination="rpZ-r3-AlX" id="kRk-RU-NNv"/>
+                        <outlet property="firstNameLabel" destination="rpZ-r3-AlX" id="WlG-Pl-abV"/>
                         <outlet property="imageView" destination="hob-hM-Ii2" id="5QC-fC-fv8"/>
-                        <outlet property="lastNameTextBox" destination="EJl-DU-zgn" id="77D-7L-89o"/>
+                        <outlet property="lastNameLabel" destination="EJl-DU-zgn" id="X9C-2X-iIO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8t-FS-g9K" userLabel="First Responder" sceneMemberID="firstResponder"/>

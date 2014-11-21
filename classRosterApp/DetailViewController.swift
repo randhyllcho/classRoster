@@ -12,8 +12,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var firstNameTextBox: UITextField!
-    @IBOutlet weak var lastNameTextBox: UITextField!
+    @IBOutlet weak var firstNameLabel: UITextField!
+    @IBOutlet weak var lastNameLabel: UITextField!
     
     var imagePickerController = UIImagePickerController()
     
@@ -21,19 +21,21 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     var cameraOverlayView: UIView?
     
-    var developer = Person(name: "", last: "")
+    var developer = Person(first: "", last: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Dev Profile"
         self.view.backgroundColor = UIColor.whiteColor()
+        self.firstNameLabel.text = "test"
+        self.lastNameLabel.text = "test 2"
         
         if (self.developer.image != nil) {
             self.imageView.image = self.developer.image!
         }         
         
-        self.firstNameTextBox.delegate = self
-        self.lastNameTextBox.delegate = self
+        self.firstNameLabel.delegate = self
+        self.lastNameLabel.delegate = self
     }
     
     //hide first name text field
@@ -49,8 +51,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     
     @IBAction func camerButtonPressed(sender: AnyObject) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
-            self.imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary){
+            self.imagePickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
             self.imagePickerController.delegate = self
             self.imagePickerController.allowsEditing = true
             self.presentViewController(self.imagePickerController, animated: true, completion: nil)

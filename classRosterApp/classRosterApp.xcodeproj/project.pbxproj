@@ -133,8 +133,8 @@
 		320B90D81A01DC7C0069AC1C /* View Layer */ = {
 			isa = PBXGroup;
 			children = (
-				320B90BB1A01DC340069AC1C /* Main.storyboard */,
 				321218241A1AFAA400CAC0C7 /* PersonTableViewCell.swift */,
+				320B90BB1A01DC340069AC1C /* Main.storyboard */,
 				320B90C01A01DC340069AC1C /* LaunchScreen.xib */,
 				321218221A16D33F00CAC0C7 /* Lamborghini-Aventador-White butt.jpg */,
 				320B90BE1A01DC340069AC1C /* lamboButt.xcassets */,

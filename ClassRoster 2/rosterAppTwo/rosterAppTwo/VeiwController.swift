@@ -13,24 +13,31 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     
-    
+    var manyPeople = [Person]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.loadFromPlist()
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("NAME_CELL", forIndexPath: indexPath) as PersonTableViewCell
-        
-        cell.nameLabel.text = "Ryan"
-        return cell
+    func loadFromPlist() {
+        let plistURL = NSBundle.mainBundle
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10000
     }
-
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("NAME_CELL", forIndexPath: indexPath) as PersonTableViewCell
+        
+        cell.firstNameLabel.text = 
+        return cell
+    }
+    
+    
   
 
 }

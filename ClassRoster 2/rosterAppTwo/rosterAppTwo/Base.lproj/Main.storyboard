@@ -77,9 +77,9 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="nameLabel" destination="bxN-Uf-d0w" id="ffx-9X-Lr1"/>
-                                            <outlet property="personImageView" destination="fj5-Gg-0vB" id="RRK-aI-OhP"/>
-                                            <outlet property="titleLabel" destination="xA9-Jd-fao" id="5rH-Gn-FqZ"/>
+                                            <outlet property="firstNameLabel" destination="bxN-Uf-d0w" id="2e1-SP-a9X"/>
+                                            <outlet property="lastNameLabel" destination="xA9-Jd-fao" id="BXc-sm-dsY"/>
+                                            <outlet property="personImageView" destination="fj5-Gg-0vB" id="B0g-IB-dv6"/>
                                             <segue destination="TEJ-63-g6b" kind="show" id="BGH-z0-1An"/>
                                         </connections>
                                     </tableViewCell>
