@@ -27,8 +27,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         super.viewDidLoad()
         self.title = "Dev Profile"
         self.view.backgroundColor = UIColor.whiteColor()
-        self.firstNameLabel.text = "test"
-        self.lastNameLabel.text = "test 2"
+        self.firstNameLabel.text = ""
+        self.lastNameLabel.text = ""
         
         if (self.developer.image != nil) {
             self.imageView.image = self.developer.image!
@@ -36,6 +36,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         
         self.firstNameLabel.delegate = self
         self.lastNameLabel.delegate = self
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.developer.firstName = self.firstNameLabel.text
     }
     
     //hide first name text field
@@ -51,8 +56,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     
     @IBAction func camerButtonPressed(sender: AnyObject) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary){
-            self.imagePickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
+            self.imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
             self.imagePickerController.delegate = self
             self.imagePickerController.allowsEditing = true
             self.presentViewController(self.imagePickerController, animated: true, completion: nil)

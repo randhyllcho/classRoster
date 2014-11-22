@@ -21,8 +21,10 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jye-hf-REK" id="vpI-Wg-PIz">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lamborghini-Aventador-White butt.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tsc-sw-A37">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tsc-sw-A37">
                                             <rect key="frame" x="38" y="8" width="70" height="70"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="70" id="aQj-73-az8"/>
                                                 <constraint firstAttribute="width" constant="70" id="cSd-9A-mnM"/>

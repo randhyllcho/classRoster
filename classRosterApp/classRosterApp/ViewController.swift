@@ -17,6 +17,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let peopleFromArchive = self.loadFromArchive() as [Person]? {
+            self.people = peopleFromArchive
+        } else {
+            self.loadFromPlist()
+            self.saveToArchive()
+        }
         self.loadFromPlist()
         self.title = "Future Dev Billionaires"
         self.tableView.dataSource = self
@@ -26,6 +32,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
      override func viewWillAppear(animated: Bool){
         super.viewWillAppear(animated)
         self.tableView.reloadData()
+        self.saveToArchive()
     }
     
     func loadFromPlist(){
@@ -40,7 +47,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         }
     }
+    func loadFromArchive() -> [Person]? {
+        let documetnsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        if let peopleFromArchive = NSKeyedUnarchiver.unarchiveObjectWithFile(documetnsPath + "/archive") as? [Person] {
+            return peopleFromArchive
+        }
+        return nil
+    }
     
+    func saveToArchive() {
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        NSKeyedArchiver.archiveRootObject(self.people, toFile: documentsPath + "/archive")
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.people.count
@@ -62,8 +80,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if segue.identifier == "SHOW_FULL_NAME" {
             let detailViewController = segue.destinationViewController as DetailViewController
             let selectedIndexPath = self.tableView.indexPathForSelectedRow()
-            var nameToPass = self.people[selectedIndexPath!.row]
-            detailViewController.developer = nameToPass
+            detailViewController.developer = self.people[selectedIndexPath!.row]
             
         }
     }
