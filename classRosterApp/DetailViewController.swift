@@ -28,7 +28,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         self.title = "Dev Profile"
         self.view.backgroundColor = UIColor.whiteColor()
         self.firstNameLabel.text = ""
-        self.lastNameLabel.text = ""
+        self.lastNameLabel.text = "" 
         
         if (self.developer.image != nil) {
             self.imageView.image = self.developer.image!

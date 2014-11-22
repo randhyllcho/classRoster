@@ -17,14 +17,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if let peopleFromArchive = self.loadFromArchive() as [Person]? {
             self.people = peopleFromArchive
         } else {
             self.loadFromPlist()
             self.saveToArchive()
         }
+        
+        var hasLaunched = NSUserDefaults.standardUserDefaults().boolForKey("firstTime")
+        
+        if hasLaunched == false {
+            NSUserDefaults.standardUserDefaults().boolForKey("firstTime")
+        }
+        
         self.loadFromPlist()
+        
         self.title = "Future Dev Billionaires"
+        
         self.tableView.dataSource = self
         self.tableView.delegate = self
     }
@@ -35,8 +45,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.saveToArchive()
     }
     
+       func loadFromArchive() -> [Person]? {
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        if let peopleFromArchive = NSKeyedUnarchiver.unarchiveObjectWithFile(documentsPath + "/archive") as? [Person] {
+            return peopleFromArchive
+        }
+        return nil
+    }
+    
+    func saveToArchive() {
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        NSKeyedArchiver.archiveRootObject(self.people, toFile: documentsPath + "/archive")
+    }
+    
     func loadFromPlist(){
         let plistURL = NSBundle.mainBundle().pathForResource("roster", ofType:"plist")
+       
         let plistArray = NSArray(contentsOfFile: plistURL!)
         for object in plistArray! {
             if let personDictionary = object as? NSDictionary {
@@ -47,18 +71,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         }
     }
-    func loadFromArchive() -> [Person]? {
-        let documetnsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-        if let peopleFromArchive = NSKeyedUnarchiver.unarchiveObjectWithFile(documetnsPath + "/archive") as? [Person] {
-            return peopleFromArchive
-        }
-        return nil
-    }
-    
-    func saveToArchive() {
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-        NSKeyedArchiver.archiveRootObject(self.people, toFile: documentsPath + "/archive")
-    }
+
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.people.count

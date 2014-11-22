@@ -21,9 +21,8 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jye-hf-REK" id="vpI-Wg-PIz">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tsc-sw-A37">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lamborghini-Aventador-White butt" translatesAutoresizingMaskIntoConstraints="NO" id="tsc-sw-A37">
                                             <rect key="frame" x="38" y="8" width="70" height="70"/>
-                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="70" id="aQj-73-az8"/>
@@ -112,7 +111,7 @@
                                     <constraint firstAttribute="width" constant="97" id="NwN-3x-rtQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EJl-DU-zgn">
                                 <rect key="frame" x="120" y="130" width="97" height="30"/>
@@ -121,7 +120,7 @@
                                     <constraint firstAttribute="height" constant="30" id="rqv-Yj-hIX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8z-N2-TtR">
                                 <rect key="frame" x="262" y="540" width="75" height="30"/>
@@ -186,6 +185,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Lamborghini-Aventador-White butt" width="640" height="360"/>
         <image name="Lamborghini-Aventador-White butt.jpg" width="1920" height="1080"/>
     </resources>
 </document>
