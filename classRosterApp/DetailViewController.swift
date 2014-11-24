@@ -12,8 +12,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var firstNameLabel: UITextField!
-    @IBOutlet weak var lastNameLabel: UITextField!
+    @IBOutlet weak var firstNameText: UITextField!
+    @IBOutlet weak var lastNameText: UITextField!
     
     var imagePickerController = UIImagePickerController()
     
@@ -21,26 +21,27 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     var cameraOverlayView: UIView?
     
-    var developer = Person(first: "", last: "")
+    var developer: Person?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Dev Profile"
+        self.title = self.developer?.fullName()
         self.view.backgroundColor = UIColor.whiteColor()
-        self.firstNameLabel.text = ""
-        self.lastNameLabel.text = "" 
+        self.firstNameText.text = self.developer?.firstName
+        self.lastNameText.text = self.developer?.lastName
         
-        if (self.developer.image != nil) {
-            self.imageView.image = self.developer.image!
-        }         
-        
-        self.firstNameLabel.delegate = self
-        self.lastNameLabel.delegate = self
+        if (self.developer?.image != nil) {
+            self.imageView.image = self.developer?.image
+        }
+            
+        self.firstNameText.delegate = self
+        self.lastNameText.delegate = self
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewWillDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
-        self.developer.firstName = self.firstNameLabel.text
+        self.developer?.firstName = self.firstNameText.text
+        self.developer?.lastName = self.lastNameText.text
     }
     
     //hide first name text field
@@ -54,7 +55,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         return true
     }
     
-    
     @IBAction func camerButtonPressed(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
             self.imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
@@ -62,17 +62,16 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
             self.imagePickerController.allowsEditing = true
             self.presentViewController(self.imagePickerController, animated: true, completion: nil)
         }
-        
     }
     
      func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         let image = info[UIImagePickerControllerEditedImage] as UIImage
         
         self.imageView.image = image
-
-        self.developer.image = image
         
         imagePickerController.dismissViewControllerAnimated(true, completion: nil)
+        
+        self.developer?.image = image
         
     }
    }

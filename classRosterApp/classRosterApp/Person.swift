@@ -36,6 +36,9 @@ class Person : NSObject, NSCoding  {
             aCoder.encodeObject(nil, forKey: "image")
         }
     }
+    func fullName() -> String {
+        return "\(firstName) \(lastName)"
+    }
 }
 
 

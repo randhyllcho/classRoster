@@ -27,11 +27,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         var hasLaunched = NSUserDefaults.standardUserDefaults().boolForKey("firstTime")
         
-        if hasLaunched == false {
-            NSUserDefaults.standardUserDefaults().boolForKey("firstTime")
+            if hasLaunched == false {
+                NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstTime")
         }
-        
-        self.loadFromPlist()
         
         self.title = "Future Dev Billionaires"
         
@@ -60,8 +58,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func loadFromPlist(){
         let plistURL = NSBundle.mainBundle().pathForResource("roster", ofType:"plist")
-       
         let plistArray = NSArray(contentsOfFile: plistURL!)
+        
         for object in plistArray! {
             if let personDictionary = object as? NSDictionary {
                 let firstName = personDictionary["First Name"] as String
@@ -93,6 +91,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if segue.identifier == "SHOW_FULL_NAME" {
             let detailViewController = segue.destinationViewController as DetailViewController
             let selectedIndexPath = self.tableView.indexPathForSelectedRow()
+            
             detailViewController.developer = self.people[selectedIndexPath!.row]
             
         }
