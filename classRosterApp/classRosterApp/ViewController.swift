@@ -13,10 +13,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var personCellImage: UIImageView!
+    
     var people = [Person]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         if let peopleFromArchive = self.loadFromArchive() as [Person]? {
             self.people = peopleFromArchive
@@ -74,15 +78,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.people.count
     }
+
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellFirst = tableView.dequeueReusableCellWithIdentifier("FIRST_NAME_CELL", forIndexPath: indexPath) as PersonTableViewCell
         
         var personToDisplay = self.people[indexPath.row]
+        
         cellFirst.nameLabel.text = personToDisplay.firstName
         cellFirst.nameLabel.font = UIFont(name: "Didot", size: 20.0)
         cellFirst.titleLabel.text = personToDisplay.lastName
         cellFirst.titleLabel.font = UIFont(name: "Didot", size: 15.0)
-        cellFirst.imageView.image = personToDisplay.image
+        cellFirst.personImagView.image = personToDisplay.image
         
         return cellFirst
     }

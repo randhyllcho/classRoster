@@ -9,6 +9,7 @@
 import UIKit
 
 class PersonTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var personImagView: UIImageView!
 
     @IBOutlet weak var nameLabel: UILabel!
